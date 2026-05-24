@@ -1,0 +1,16 @@
+<suite name="PARAMETERIZED suite">
+    <test name="test PARAMETERIZED - 3=Spring !!!">
+        <parameter name="month" value="3" />
+        <parameter name="expectedSeason" value="Spring" />
+        <classes>
+            <class name="tests.ParameterizedTest" />
+        </classes>
+    </test>
+<!--    <test name="test PARAMETERIZED - 12=Winter !!!">-->
+<!--        <parameter name="month" value="12" />-->
+<!--        <parameter name="expectedSeason" value="Winter" />-->
+<!--        <classes>-->
+<!--            <class name="tests.ParameterizedTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

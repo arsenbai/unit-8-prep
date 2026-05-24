@@ -1,0 +1,7 @@
+<suite name="BAR suite">
+    <test name="TEST NAME! yeah! at bar">
+        <classes>
+            <class name="tests.TypeTest" />
+        </classes>
+    </test>
+</suite>

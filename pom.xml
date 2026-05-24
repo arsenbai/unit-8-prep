@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/xsd/maven-4.0.0.xsd
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>testng-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>TestNG Project</name>
+
+    <dependencies>
+
+        <!-- Aquality Selenium -->
+        <!-- Source: https://mvnrepository.com/artifact/com.github.aquality-automation/aquality-selenium -->
+        <dependency>
+            <groupId>com.github.aquality-automation</groupId>
+            <artifactId>aquality-selenium</artifactId>
+            <version>4.22.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- TestNG dependency -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Surefire Plugin to run TestNG tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>
+                            src/test/resources/foo_test.xml
+                        </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/bar_test.xml
+                        </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/parameterized_test.xml
+                        </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/programming_practice.xml
+                        </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/DDT_task.xml
+                        </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

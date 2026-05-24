@@ -1,0 +1,27 @@
+{
+  "browserName": "chrome",
+  "isRemote": false,
+  "isDriverLoggingEnabled": true,
+  "isElementHighlightEnabled": false,
+
+  "timeouts": {
+    "timeoutImplicit": 10,
+    "timeoutPageLoad": 30,
+    "timeoutScript": 10,
+    "timeoutCondition": 5,
+    "timeoutPollingInterval": 500,
+    "timeoutCommand": 60
+  },
+
+  "retry": {
+    "number": 2,
+    "timeout": 1,
+    "pollingInterval": 500
+  },
+
+  "chromeOptions": {
+    "args": ["--incognito"]
+  },
+
+  "startBrowser": true
+}

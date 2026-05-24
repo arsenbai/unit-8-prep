@@ -1,0 +1,22 @@
+<suite name="Programming Practice suite">
+    <test name="Module 1: Collections Streams Test">
+        <classes>
+            <class name="tests.CollectionsStreamsTest" />
+        </classes>
+    </test>
+    <test name="Module 2: Basic, Logic and Formatting Test">
+        <classes>
+            <class name="tests.BasicLogicFormattingTest" />
+        </classes>
+    </test>
+    <test name="Module 3: Error Handling">
+        <classes>
+            <class name="tests.ErrorHandlingTest" />
+        </classes>
+    </test>
+    <test name="Module 4: Advanced OOP (Animals Zoo Project)">
+        <classes>
+            <class name="tests.AdvancedOOP" />
+        </classes>
+    </test>
+</suite>

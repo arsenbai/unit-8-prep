@@ -1,0 +1,7 @@
+<suite name="FOO suite">
+    <test name="TEST NAME! at foo">
+        <classes>
+            <class name="tests.AppointmentTest" />
+        </classes>
+    </test>
+</suite>

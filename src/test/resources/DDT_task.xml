@@ -1,0 +1,7 @@
+<suite name="DDT suite">
+    <test name="DDT test">
+        <classes>
+            <class name="tests.DataDrivenTestingTaskTest" />
+        </classes>
+    </test>
+</suite>

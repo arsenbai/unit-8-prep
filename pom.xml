@@ -55,6 +55,9 @@
                         <suiteXmlFile>
                             src/test/resources/DDT_task.xml
                         </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/files_work.xml
+                        </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

@@ -1,0 +1,7 @@
+<suite name="Files Work suite">
+    <test name="File test">
+        <classes>
+            <class name="tests.FilesIOTest" />
+        </classes>
+    </test>
+</suite>

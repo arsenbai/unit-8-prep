@@ -69,6 +69,9 @@
                         <suiteXmlFile>
                             src/test/resources/json_read_write.xml
                         </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/soft_assert.xml
+                        </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

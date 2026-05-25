@@ -1,0 +1,7 @@
+<suite name="SOFT ASSERT suite">
+    <test name="SOFT ASSERT test">
+        <classes>
+            <class name="tests.SoftAssertTest" />
+        </classes>
+    </test>
+</suite>

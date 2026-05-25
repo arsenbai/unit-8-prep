@@ -18,16 +18,14 @@ public class DataDrivenTestingTaskTest {
     @Test(dataProvider = "demoqa.com Text Box data", dataProviderClass = TestData.class)
     public void testTextBox(
             String fullname,
-            String email,
-            String expectedFullnameXpath,
-            String expectedEmailXpath) {
+            String email) {
         TextBoxPage.open();
         TextBoxPage.fillFullnameAndEmail(fullname, email);
         TextBoxPage.clickSubmitButton();
         TextBoxPage.outputIsDisplayed();
-        Assert.assertTrue(TextBoxPage.fullnameIsDisplayedInOutput(expectedFullnameXpath),
+        Assert.assertTrue(TextBoxPage.fullnameIsDisplayedInOutput(fullname),
                 "Fullname does not exist in output");
-        Assert.assertTrue(TextBoxPage.emailIsDisplayedInOutput(expectedEmailXpath),
+        Assert.assertTrue(TextBoxPage.emailIsDisplayedInOutput(email),
                 "Email does not exist in output");
     }
 

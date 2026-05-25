@@ -2,6 +2,7 @@ package pages;
 
 import aquality.selenium.browser.AqualityServices;
 import aquality.selenium.elements.interfaces.IButton;
+import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.elements.interfaces.ITextBox;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
@@ -24,6 +25,21 @@ public class TextBoxPage extends Form {
         super(By.xpath("//body"), "Text Box Page");
     }
 
+    private static ILabel getOutputNameElement() {
+        ILabel outputNameElement = AqualityServices.getElementFactory().getLabel(
+                By.xpath("//p[@id='name']"), "Output Name"
+        );
+        outputNameElement.state().waitForDisplayed();
+        return outputNameElement;
+    };
+    private static ILabel getOutputEmailElement() {
+        ILabel outputEmailElement = AqualityServices.getElementFactory().getLabel(
+                By.xpath("//p[@id='email']"), "Output Name"
+        );
+        outputEmailElement.state().waitForDisplayed();
+        return outputEmailElement;
+    };
+
     public static void open() {
         AqualityServices.getBrowser().goTo("https://demoqa.com/text-box");
     }
@@ -45,13 +61,13 @@ public class TextBoxPage extends Form {
                 .state().waitForDisplayed(Duration.of(3, ChronoUnit.SECONDS));
     }
 
-    public static boolean fullnameIsDisplayedInOutput(String expectedFullnameXpath) {
-        return AqualityServices.getElementFactory().getLabel(By.xpath(expectedFullnameXpath), "Output Fullname")
-                .state().isExist();
+    public static boolean fullnameIsDisplayedInOutput(String fullname) {
+        System.out.println(getOutputNameElement().getElement().getText());
+        return getOutputNameElement().getElement().getText().contains(fullname);
     };
 
-    public static boolean emailIsDisplayedInOutput(String expectedEmailXpath) {
-        return AqualityServices.getElementFactory().getLabel(By.xpath(expectedEmailXpath), "Output Email")
-                .state().isExist();
+    public static boolean emailIsDisplayedInOutput(String email) {
+        System.out.println(getOutputEmailElement().getElement().getText());
+        return getOutputEmailElement().getElement().getText().contains(email);
     };
 }

@@ -29,6 +29,14 @@
             <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Source: https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,6 +65,9 @@
                         </suiteXmlFile>
                         <suiteXmlFile>
                             src/test/resources/files_work.xml
+                        </suiteXmlFile>
+                        <suiteXmlFile>
+                            src/test/resources/json_read_write.xml
                         </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>

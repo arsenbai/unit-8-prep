@@ -1,0 +1,7 @@
+<suite name="Files Work suite">
+    <test name="Json Read Write test">
+        <classes>
+            <class name="tests.JsonReadWriteTest" />
+        </classes>
+    </test>
+</suite>
